@@ -150,7 +150,7 @@ figcaption {
 
 /* Flexbox Filmtipps Header - Container */
 #filmtipps {
-	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../pics/filmrolle.jpg");	
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("filmrolle.jpg");	
 	background-size: cover;
 	background-repeat: no-repeat;
 	/* Wie in der Präsenz besprochen funktioniert das Zusammenfassen der background Eigenschaften hier nicht, ohne dass das Hintergrundbild verschwindet */
