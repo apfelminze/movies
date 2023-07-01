@@ -1,0 +1,291 @@
+/* Element-Selektoren */
+
+*, *::after, *::before {
+	font-family:sans-serif;
+	box-sizing: border-box;
+}
+
+/* Main Flexbox - Container */
+main {
+	padding:3rem;
+	display:flex;
+	align-items:flex-start;
+	flex-direction: column;
+	justify-content:flex-start;
+	width:100%;
+}
+
+/* Main Flexbox - Items */
+article {
+	flex: 1 0; 
+}
+
+body {
+	background-color: rgba(204, 229, 255, 1); /* light blue */
+	font-family:monospace;
+}
+
+li,th,td,p, legend, label {
+	font-size: 1.1rem; 
+}
+
+h1 {
+	font-family:sans-serif;
+	text-align:left;
+}
+
+h2 {
+	text-transform: lowercase;
+	font-family: "Lucida Console", "Courier New", monospace;
+	text-align:left;
+	font-size: 2rem;
+}
+
+header h1 {
+	font-size: 4rem;
+}
+
+header h2 {
+	font-size: 2rem;
+}
+
+
+table, th, td {
+	border: 1px solid;
+	border-collapse: collapse;
+	padding: 0.9375rem; 
+}
+
+/* Flexbox Nav - Container */
+nav {
+	padding:0.5rem; 
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:flex-start;
+	position:sticky;
+	top: 0;
+}
+
+/* Flexbox Nav - Items */
+nav div {
+	background-color: rgba(77, 77, 77, 1); /* grey */
+	flex: 1 0; 
+}
+
+nav a {
+	display: block;
+	padding: 0.875rem 1rem; 
+	text-decoration: none;
+	font-size: 1.4rem;
+}
+
+
+form {
+	padding:1.5rem;
+	width:100%;
+	display:inline-block;
+}
+
+textarea {
+	width: 100%;
+	padding:0.8rem 0.8rem;
+	border:none 4px;
+	background-color: var(--purple); 
+	color:rgba(255, 255, 255, 1);
+	height:7rem;
+}
+
+select {
+	background-color:var(--pink);
+	border-radius: 4px;
+}
+
+figcaption {
+	caption-side: top;
+	font-style: italic;
+	font-size:0.7rem;
+	position: absolute;
+}
+
+/* Klassenselektoren */
+
+/* Flexbox Filmtipps & Filmbestellung Header - Item */
+/* Flexbox Header-div - Container */
+.header-div {
+	width:60%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:30rem;
+	flex-direction: column;
+	vertical-align: top;
+	flex: 1 0; /* can grow but not shrink in relation to  .left-box, .right-box */
+}
+
+/* Flexbox Header-div - Items */
+.header-h {
+	text-align:center;
+}
+
+
+.left-box, .right-box {
+	width:20%;
+	border: 5px solid rgba(255, 255, 255, 0); /* transparent */
+	/* ohne Border nehmen left-box und right-box nicht den ihnen zugewiesenen Platz (20%) ein */
+	flex: 0 1; /* can not grow in relation to heaver-div, but can shrink */
+}
+
+.filmposter {
+	height:14rem; 
+	padding:0.625rem;
+	position:relative;
+}
+
+.title {
+	font-weight:bold;
+}
+
+
+/* ID-Selektoren */
+
+/* Flexbox Filmtipps Header - Container */
+#filmtipps {
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../pics/filmrolle.jpg");	
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* Wie in der Präsenz besprochen funktioniert das Zusammenfassen der background Eigenschaften hier nicht, ohne dass das Hintergrundbild verschwindet */
+	height:30rem;
+	position:relative;
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+}
+
+/* Flexbox Filmbestellung Header - Container */
+#filmbestellg {
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../pics/rose.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* Wie in der Präsenz besprochen funktioniert das Zusammenfassen der background Eigenschaften hier nicht, ohne dass das Hintergrundbild verschwindet */
+	height:30rem;
+	position:relative;
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+}
+
+#filmtipps .header-h {
+	color: var(--pink); 
+	text-shadow: 1px 1px black;
+}
+
+#filmbestellg .header-h {
+	color:var(--black);
+}
+
+#bestell_link, #zurueck {
+	font-style: italic;
+}
+
+#formular-div {
+	width: 100%;
+}
+
+#uebersicht {
+	padding:1rem;
+}
+
+/* Flexbox Filmbeschreibungen - Container */
+#beschreibungen ul {
+	display:flex;
+	flex-flow: row wrap;
+	justify-content:flex-start;
+}
+
+/* Flexbox Filmbeschreibungen - Items */
+#beschreibungen li {
+	max-width:60ch;
+	width: 50%;
+	padding:1rem;
+	flex: 1 0; 
+}
+
+/* List Bullets */
+/* doesn't work in Chrome */
+#beschreibungen li::marker {
+	content: "\1F419";
+	font-size: 0.7rem;
+	margin:1px;
+}
+
+
+/* Attribut-Selektoren */
+
+input[type=text], input[type=email] {
+	background-color: rgba(115, 27, 104, 1);
+	color:rgba(255, 255, 255, 1);
+	border:none 4px;
+	width: 100%;
+	padding: 1rem 1rem;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	border: none 4px;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-family:monospace;
+	font-size: 1rem; 
+	background-color:var(--pink);
+}
+
+
+/* Pseudoklassen  */
+
+/* Variablen */
+:root {
+	--light-grey: rgba(221, 221, 221, 1);
+	--white: rgba(255, 255, 255, 1);
+	--black: rgba(0, 0, 0, 1);
+	--dark-grey: rgba(165, 165, 165, 1);
+	--purple: rgba(115, 27, 104, 1);
+	--pink: rgba(245, 40, 145, 1);
+}
+
+*:required {
+	font-weight:bold;
+}
+
+/* Styling of Links */
+nav a:link {
+	color: var(--white); /* white */
+}
+
+nav a:hover {
+	background-color: var(--light-grey);
+	color: var(--black); 
+}
+
+table a:link, #bestell_link a:link, #zurueck a:link {
+	color: rgba(21, 83, 185, 1); /* blue */
+	text-decoration: none;
+}
+
+table a:visited, #bestell_link a:visited, #zurueck a:visited {
+	color: var(--dark-grey); 
+}
+
+table a:hover, #bestell_link a:hover, #zurueck a:hover {
+	border-bottom: 3px double;
+}
+
+
+
+
+
+
