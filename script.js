@@ -1,31 +1,6 @@
 
 {
     "use strict";
-	
-/* ÜBEN VON SELEKTOREN */
-
-	// get HTML element by type of element
-	const article = document.getElementsByTagName("article");
-	// console.log(article);
-	// get HTML element by ID
-	const bestell_link = document.getElementById("bestell_link");
-	// console.log(bestell_link);
-	// get HTML element by CSS Selektor (select all elements fitting the criteria)
-	const nav_links = document.querySelectorAll("nav a");
-	// console.log(nav_links);
-	const descr_links = document.querySelectorAll("#uebersicht td a");
-	// console.log(descr_links);
-	// get HTML element by CSS Selektor (select first element fitting the criteria)
-	const filmtipps_header = document.querySelector("#filmtipps");
-	// console.log(filmtipps_header);
-	const zurueck_link = document.getElementById("zurueck");
-	const film_buttons = document.getElementsByName("film[]");
-	// console.log(film_buttons);
-	const h1 = document.getElementsByTagName("h1");
-	// console.log(h1);
-	const left_box = document.getElementsByClassName("left-box");
-	// console.log(left_box);
-
 
 /* INTERAKTIVE ELEMENTE */
 
@@ -43,11 +18,11 @@
 			decreaseImgSize(currentposter);
 		});
 		// change Filmposter to other picture
-		if(currentposter.src.match("pics/My_Beautiful_Laundrette.jpg")) {
+		if(currentposter.src.match("My_Beautiful_Laundrette.jpg")) {
 			currentposter.addEventListener("click", function() {
 				// currentposter.scr = "pics/My_Beautiful_Laundrette2.jpg";
 				// obiger Aufruf funktioniert nicht
-				currentposter.setAttribute('src', 'pics/My_Beautiful_Laundrette2.jpg');
+				currentposter.setAttribute('src', 'My_Beautiful_Laundrette2.jpg');
 				let answer = document.createElement("p");
 				let text = document.createTextNode("Sie sehen jetzt das zweite Filmposter, das es zu diesem Film gibt");
 				// answer.style.font = "italic bold 0.7rem";
