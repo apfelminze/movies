@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <!-- Meta Infos und zusätliche Ressourcen in Form von Verlinkungen -->
+        <meta charset="utf-8">
+        <title>Filmtipps</title>
+  <meta name="date" content="2023-04-19">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet/stylesheet.css">
+        <script src="script.js" defer async></script>
+    </head>
+    <body>
+        <!-- sichtbar im viewport -->
+        <header id="filmtipps">
+		<div class="left-box"></div>
+		<div class="header-div">
+			<h1 class="header-h">Filmtipps</h1><br>
+			<h2 class="header-h">Eine Auswahl von guten indie Filmen aus den 70ern bis heute</h2>
+		</div>
+		<div class="right-box"></div>
+        </header>
+        <!-- Auch die nav sollte es nur einmal geben. -->
+        <nav>
+                <!-- Verlinkungen innerhalb des Dokumentes beginnen mit einem #. -->
+                <div><a href="#uebersicht">Übersicht</a></div>
+                <div><a href="#beschreibungen">Beschreibungen von Filmen</a></div>
+                <div><a href="#formular">Bestellformular</a></div>
+        </nav>
+        <main>
+		<a href="#" onclick="window.alert('Guten Tag, liebe Filmfreund*in!');">
+		    Ich will erstmal anständig begrüßt werden 
+		</a>
+            <article id="uebersicht">
+                <h2>Filmtipps</h2>
+                <table>
+			<caption> Übersicht über die hier empfohlenen Filme</caption>
+			<tr>
+				<th>Titel</th>
+				<th>Erscheinungsjahr</th>
+				<th>Stichwörter</th>
+				<th>Link zur Beschreibung</th>
+			</tr>
+			<tr>
+				<td>Female Pleasure</td>
+				<td>2018</td>
+				<td>Sexualität, Feminismus</td>
+				<td> <a href="#femalepl"> zur Beschreibung </a></td>
+			</tr>
+			<tr>
+				<td>Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles</td>
+				<td>1975</td>
+				<td>Slow Cinema, Feminismus</td>
+				<td> <a href="#jeanned"> zur Beschreibung </a></td>
+			</tr>
+			<tr>
+				<td>My Beautiful Laundrette </td>
+				<td>1985 </td>
+				<td>migrantische Community, Homosexualität</td> 
+				<td> <a href="#mybeautiful"> zur Beschreibung </a></td>
+			</tr>
+			<tr>
+				<td>Toni Erdmann</td>
+				<td>2016 </td>
+				<td>skurril</td> 
+				<td> <a href="#tonie"> zur Beschreibung </a></td>
+			</tr>
+		</table>
+            <!-- Verlinkungen zu anderen Dokumenten benötigen eine url oder einen Pfad. Mit dem Attribut target öffnen Sie einen neuen tab im Browser. target="_blank"  -->
+            </article>
+            <article id="beschreibungen">
+                <h2>Beschreibungen von Filmen</h2>
+                <ul>
+			<li id="femalepl"><p class="title"> Female Pleasure:</p>
+				Der Film setzt sich mit der weiblichen Sexualität im 21. Jahrhundert rund um den Globus auseinander. Er begleitet fünf junge Frauen aus fünf verschiedenen Kulturen, die sich gegen die Repression der weiblichen Sexualität ihrer kulturellen und religiösen Gemeinschaften auflehnen.
+				<br>
+				<figure>
+				  <img class="filmposter" src="pics/Female_Pleasure.jpg" alt="Filmposter Female Pleasure" title="Filmposter">
+				  <figcaption>Filmposter Female Pleasure</figcaption>
+				</figure>
+			</li>
+			<li id="jeanned"> <p class="title"> Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles:</p>
+				Das fast dreieinhalbstündige Drama stellt drei Tage im Leben einer verwitweten Frau und Mutter in den Mittelpunkt, die auch als Gelegenheitsprostituierte arbeitet.
+				<br>
+				<figure>
+				<img class="filmposter" src="pics/JeanneDielman.png" alt="Filmposter Jeanne Dielman" title="Filmposter">
+				  <figcaption>Filmposter Jeanne Dielman...</figcaption>
+				</figure>
+			</li>
+			<li id="mybeautiful"> <p class="title"> My Beautiful Laundrette:</p>
+				Der heruntergekommene pakistanische Journalist Hussein Ali, der in seinem Heimatland hohes Ansehen genoss, lebt im von Margaret Thatcher regierten England, genauer gesagt im Londoner Süden, in einer verwahrlosten Wohnung. 
+				Sein Sohn Omar kümmert sich um ihn. 
+				Omar verliebt sich in Johnny, der ihm noch aus der Schule bekannt ist, arbeitslos ist und in besetzten Häusern lebt.
+				Johnny überredet Omar, in das Geschäft mit einem heruntergekommenen, schlecht laufenden Waschsalon einzusteigen.
+				<br>
+				<figure>
+				<img class="filmposter" src="pics/My_Beautiful_Laundrette.jpg" alt="Filmposter My Beautiful Laundrette" title="Filmposter">
+				  <figcaption>Filmposter My Beautiful Laundrette</figcaption>
+				</figure>
+			</li>
+			<li id="tonie"> <p class="title"> Toni Erdmann:</p>
+				Der allein lebende pensionierte Musiklehrer Winfried Conradi, Alt-68er, plant einen Überraschungsbesuch bei seiner Tochter Ines. Diese arbeitet in Bukarest an ihrer Karriere als Unternehmensberaterin, und ist ihm fremd geworden.
+				Ines jedoch ist nur wenig erfreut, als ihr Vater in Bukarest aufkreuzt.
+				<br>
+				<figure>
+				<img class="filmposter" src="pics/Toni_Erdmann.png" alt="Filmposter Toni Erdmann" title="Filmposter">
+				  <figcaption>Filmposter Toni Erdmann</figcaption>
+				</figure>
+			</li>
+		</ul>
+            </article>
+	<article id="drucken">
+		<a href="javascript:window.print();"> Diese Seite drucken </a>
+	</article>
+        </main>
+    </body>
+</html>
